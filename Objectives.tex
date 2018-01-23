@@ -1,0 +1,168 @@
+\documentclass[10pt]{article}
+
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+
+\newtcblisting{cisco}[1][]{size=fbox, listing only, listing options={style=tcblatex,basicstyle=\ttfamily\scriptsize,tabsize=2,language=sh},#1}
+
+\renewcommand{\arraystretch}{1.2}
+\renewcommand\thesubsubsection{\thesubsection.\alph{subsubsection}}
+
+\begin{document}
+
+\title{Cisco Certified Network Associate (200-125)}
+\author{Joshua French}
+\date{\vspace{-5ex}}
+
+\maketitle
+
+\renewcommand{\abstractname}{Exam Description}
+\begin{abstract}
+The Cisco Certified Network Associate (CCNA) Routing and Switching composite
+exam (200-125) is a 90-minute, 50–60 question assessment that is associated with the CCNA Routing
+and Switching certification. This exam tests a candidate's knowledge and skills related to network
+fundamentals, LAN switching technologies, IPv4 and IPv6 routing technologies, WAN technologies,
+infrastructure services, infrastructure security, and infrastructure management.
+
+The following topics are general guidelines for the content likely to be included on the exam. However,
+other related topics may also appear on any specific delivery of the exam. In order to better reflect the
+contents of the exam and for clarity purposes, the guidelines below may change at any time without
+notice.
+\end{abstract}
+
+\tableofcontents
+
+\newpage
+\section{Network Fundamentals}
+
+\subsection{Compare and contrast OSI and TCP/IP models}
+\begin{tabular}{@{}lll@{}}
+\toprule
+& OSI & TCP/IP \\ \midrule
+Layers & 7 Layers & 4 Layers \\
+Type & General-purpose model & Only applies to TCP/IP \\
+\bottomrule
+\end{tabular}
+
+\subsection{Compare and contrast TCP and UDP protocols}
+\begin{tabular}{@{}ll@{}}
+\toprule
+TCP & UDP \\ \midrule
+Connection-oriented & Connectionless \\
+\bottomrule
+\end{tabular}
+
+\subsection{Describe the impact of infrastructure components in an enterprise network}
+\subsubsection{Firewalls}
+Firewalls restrict movement of packets between sections of the network. They can be independent devices or integrated into hosts or routers.
+
+\subsubsection{Access points}
+Access points bridge wireless networks to wired networks. They can be used with or without a controller.
+They utilize some wireless standard (usually something 802.11) to communicate with clients and bridge that traffic to either a wired network or 
+another wireless network (wireless backhaul or mesh networking).
+
+\subsubsection{Wireless controllers}
+Wireless controllers control access points and can provide a path for traffic from wireless clients to the rest of the network. They usually are used 
+with lightweight access points that cannot be configured on their own.
+
+\subsection{Describe the effects of cloud resources on enterprise network architecture}
+\subsubsection{Traffic path to internal and external cloud services}
+Cloudy cloud cloud
+\subsubsection{Virtual services}
+Cloudy cloud cloud
+\subsubsection{Basic virtual network infrastructure}
+VXLAN?
+
+\subsection{Compare and contrast collapsed core and three-tier architectures}
+Table here
+\subsection{Compare and contrast network topologies}
+Table here
+\subsubsection{Star}
+List here
+\subsubsection{Mesh}
+List here
+\subsubsection{Hybrid}
+List here
+
+\subsection{Select the appropriate cabling type based on implementation requirements}
+Fiber vs copper?
+
+\subsection{Apply troubleshooting methodologies to resolve problems}
+\subsubsection{Perform and document fault isolation}
+How to
+
+\subsubsection{Resolve or escalate}
+How to
+
+\subsubsection{Verify and monitor resolution}
+How to
+
+\subsection{Configure, verify, and troubleshoot IPv4 addressing and subnetting}
+\begin{cisco}[title=Set IP Address]
+conf t
+int g0/0
+ip address 172.16.48.1 255.255.255.0
+no shut
+exit
+\end{cisco}
+
+\subsection{Compare and contrast IPv4 address types}
+\subsubsection{Unicast}
+Unicast addresses refer to a single host.
+
+\subsubsection{Broadcast}
+Broadcast addresses refer to hosts within the broadcast scope.
+
+\subsubsection{Multicast}
+Multicast addresses refer to all hosts subscribed to a multicast address.
+
+\subsection{Describe the need for private IPv4 addressing}
+Fake news.
+
+\subsection{Identify the appropriate IPv6 addressing scheme to satisfy addressing requirements in a LAN/WAN environment}
+/32 for the company
+/48 for each location
+/56 for each building
+/64 for each vlan
+
+\subsection{Configure, verify, and troubleshoot IPv6 addressing}
+conf t
+int g0/0
+ipv6 address fd00::1/64
+no shut
+end
+
+\subsection{Configure and verify IPv6 Stateless Address Auto Configuration}
+conf t
+int g0/0
+ipv6 address slaac
+no shut
+end
+
+\subsection{ Compare and contrast IPv6 address types}
+\subsubsection{Global unicast}
+This is a test
+\subsubsection{Unique local}
+ULA addresses
+
+\subsubsection{Link local}
+Addresses only valid on the link.
+
+\subsubsection{Multicast}
+Addresses
+
+\subsubsection{Modified EUI 64}
+Soooo many types
+
+\subsubsection{Autoconfiguration}
+Wut?
+
+\subsubsection{Anycast}
+Awwww yeah
+
+\section{LAN Switching Technologies}
+This is a test
+
+\listoftables
+\end{document}
