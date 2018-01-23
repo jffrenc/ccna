@@ -19,6 +19,8 @@
 # *.eps
 # *.pdf
 
+Objectives.pdf
+
 ## Generated if empty string is given at "Please type another file name for output:"
 .pdf
 
@@ -218,3 +220,6 @@ TSWLatexianTemp*
 
 # expex forward references with \gathertags
 *-tags.tex
+
+# save file
+*.tex.save
